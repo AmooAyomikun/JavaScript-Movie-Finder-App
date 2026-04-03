@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Movie Search App</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><i class="fas fa-film"></i> MovieFinder</div>
+        <div class="search-bar">
+            <input type="text" id="search-bar" placeholder="Search for movies...">
+            <small id="error-state">Please enter a movie title</small>
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <nav>
+            <button id="home-btn">Home</button>
+            <button id="favorite-btn">Favorites</button>
+            <button id="popular-btn">Popular</button>
+            <button id="trending-btn">Trending</button>
+        </nav>
+    </header>
+
+    <section class="filters">
+        <select name="year">
+            <option value="all-year">All Year</option>
+        </select>
+        <select name="type">
+            <option value="all-type">All Types</option>
+            <option value="movie">Movie</option>
+            <option value="series">Series</option>
+            <option value="episode">Episode</option>
+        </select>
+        <select name="sort">
+            <option value="sort-by">Sort By</option>
+            <option value="title">Title</option>
+            <option value="year">Year</option>
+        </select>
+        <button class="clear-filters">Clear Filters</button>
+    </section>
+
+    <div class="active-filters" id="active-filters">
+        <!-- <div class="chip" id="active-year">2024 ✕</div>
+        <div class="chip" id="active-type">Movie ✕</div> -->
+    </div>
+
+    <section class="results" id="results">
+        <div class="results-header">
+            <h2>Results</h2>
+            <span id="movie-number">0 movies found</span>
+        </div>
+
+        <div class="grid" id="movie-grid">
+            <!-- <div class="card">
+                <img class="poster" src="" alt="poster">
+                <div class="card-body">
+                    <div class="title">Movie Title</div>
+
+                    <div class="meta">
+                        <span>2024</span>
+                        <span class="badge">Movie</span>
+                    </div>
+
+                    <div class="meta">
+                        <span><i class="fa-solid fa-star" style="color: yellow;"></i> 8.2</span>
+                        <span class="favorite">♡</span>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- <div class="empty-state" id='empty-state'>No movies found</div>
+        <div class="loading-state" id='loading-state'>Loading movies...</div>
+        <div class="error-state" id='error-state'>Something went wrong</div> -->
+
+        <div class="pagination">
+            <!-- <button>Load More</button> -->
+        </div>
+    </section>
+
+    <section class="favorites" id="favorite-field">
+        <h2>Favorites (0)</h2>
+        <div class="grid" id="favorites-grid"></div>
+    </section>
+
+    <div class="modal" id="movie-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="span"><i class="fa-solid fa-xmark"></i></span>
+            <div class="modal-body">
+                <div class="modal-poster">
+                    <img src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2>Movie Title</h2>
+                    <div class="modal-meta">
+                        <span class="badge">2023</span>
+                        <span class="badge">Action</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 8.9 / 10</span>
+                        <span class="badge">8.3 / 10</span>
+                    </div>
+                    <p><strong>Runtime:</strong> 40 min</p>
+                    <p><strong>Director:</strong> Amoo Ayomikun</p>
+                    <p><strong>Actors:</strong> Actor 1, Actor 2</p>
+                    <p class="plot"><strong>Plot:</strong> Movie description...</p>
+                    <button class="fav-btn">Add to Favorites</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
