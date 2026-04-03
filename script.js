@@ -257,10 +257,8 @@ function handleFavorite(movie){
         favorites = favorites.filter(function(favorite){
             return favorite.imdbID !== movie.imdbID
         })
-        alert('Favorite removed')
     }else{
         favorites.unshift(movie)
-        alert('Favorite added')
     }
 
     updateLocalStorage()
